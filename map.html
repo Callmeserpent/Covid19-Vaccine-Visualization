@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map</title>
+    <style>
+    
+
+      #map-title {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 10px;
+      }
+
+      /* CSS để tùy chỉnh color legend */
+      .legend-container {
+        position: absolute;
+        top: 20px;
+        right: 20px; /* Chuyển color legend về bên phải */
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transform: scale(0.8); /* Thu nhỏ color legend */
+        transform-origin: bottom right;
+      }
+
+      .legend-item {
+        margin-bottom: 5px;
+        padding: 5px;
+        border-radius: 3px;
+        color: #333;
+      }
+    </style>
+    <script src="http://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+  </head>
+  <body>
+    <div id="map-container">
+      <div id="map_dataviz"></div>
+      <div
+        id="tooltip"
+        style="
+          position: absolute;
+          opacity: 0;
+          background-color: white;
+          padding: 10px;
+          border: 1px solid gray;
+        "
+      ></div>
+    </div>
+    <div id="map-title">Country_Vaccinations_By_Manufacturer</div>
+    <script src="Map.js"></script>
+  </body>
+</html>
